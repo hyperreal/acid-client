@@ -9,4 +9,4 @@ Run `php composer.phar install`. That's it.
 
 ## Usage
 
-You can look at our examples in `example` directory.
+You can look at our examples in `example` directory. They should be self-explanatory.
