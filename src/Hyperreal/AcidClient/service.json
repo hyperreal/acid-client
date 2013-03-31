@@ -1,0 +1,28 @@
+{
+    "name": "Acid",
+    "apiVersion": "2013-03-31",
+    "description": "Acid is an AcidAdServer API consumer",
+    "operations": {
+        "GetAnnouncementsList": {
+            "httpMethod": "GET",
+            "uri": "/api/announcement",
+            "summary": "Retrieves an announcements list",
+            "responseClass": "Hyperreal\\AcidClient\\Entity\\AnnouncementList",
+            "responseType": "class"
+        },
+        "GetOneAnnouncement": {
+            "httpMethod": "GET",
+            "uri": "/api/announcement/{id}",
+            "summary": "Retrieves a single announcement",
+            "responseClass": "Hyperreal\\AcidClient\\Entity\\Announcement",
+            "responseType": "class",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "description": "Announcement to retrieve by ID",
+                    "required": true
+                }
+            }
+        }
+    }
+}
