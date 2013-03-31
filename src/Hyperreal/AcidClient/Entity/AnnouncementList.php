@@ -27,4 +27,12 @@ class AnnouncementList implements ResponseClassInterface
 
         return new self($response);
     }
+
+    /**
+     * @return Announcement[]
+     */
+    public function getAnnouncements()
+    {
+        return $this->announcements;
+    }
 }
