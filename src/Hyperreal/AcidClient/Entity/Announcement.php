@@ -10,6 +10,7 @@ class Announcement implements ResponseClassInterface
     const TYPE_STANDARD = 'standard';
     const TYPE_PREMIUM = 'premium';
 
+	private $id;
     private $uid;
     private $userName;
     private $title;
@@ -19,6 +20,7 @@ class Announcement implements ResponseClassInterface
 
     public function __construct(array $response)
     {
+		$this->id = $response['id'];
         $this->uid = $response['uid'];
         $this->userName = $response['userName'];
         $this->title = $response['title'];
@@ -36,6 +38,11 @@ class Announcement implements ResponseClassInterface
     {
         return new self($command->getResponse()->json());
     }
+
+	public function getId()
+	{
+		return $this->id;
+	}
 
     public function getAddDate()
     {

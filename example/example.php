@@ -4,7 +4,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $client = \Hyperreal\AcidClient\AcidClient::factory(
     array(
-        'base_url' => 'http://localhost:8000/app_dev.php'
+        'base_url' => 'http://acid.local/app_dev.php'
     )
 );
 
