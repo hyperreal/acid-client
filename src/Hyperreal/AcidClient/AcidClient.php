@@ -23,6 +23,11 @@ class AcidClient extends Client
         $description->setBaseUrl($config->get('base_url'));
 
         $client->setDescription($description);
+        $client->setDefaultHeaders(
+            array(
+                'X-Acid-Auth' => $config->get('token')
+            )
+        );
 
         return $client;
     }

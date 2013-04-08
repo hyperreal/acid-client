@@ -23,6 +23,38 @@
                     "required": true
                 }
             }
+        },
+        "ReportAnnouncement": {
+            "httpMethod": "POST",
+            "uri": "/api/announcement/report",
+            "summary": "Sends a report of breaking the rules by an announcement",
+            "responseType": "primitive",
+            "parameters": {
+                "id": {
+                    "location": "postField",
+                    "description": "ID of reported announcement",
+                    "required": true
+                }
+            }
+        }
+    },
+    "models": {
+        "ReportAnnouncementOutput": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "location": "json",
+                    "sentAs": "s",
+                    "type": "boolean",
+                    "required": true
+                },
+                "message": {
+                    "location": "json",
+                    "sentAs": "m",
+                    "type": "string",
+                    "required": false
+                }
+            }
         }
     }
 }
