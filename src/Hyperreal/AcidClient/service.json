@@ -28,7 +28,8 @@
             "httpMethod": "POST",
             "uri": "/api/announcement/report",
             "summary": "Sends a report of breaking the rules by an announcement",
-            "responseType": "primitive",
+            "responseClass": "Hyperreal\\AcidClient\\Entity\\ReportResponse",
+            "responseType": "class",
             "parameters": {
                 "id": {
                     "location": "postField",
